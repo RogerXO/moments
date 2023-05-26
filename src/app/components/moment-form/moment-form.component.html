@@ -1,4 +1,4 @@
-<form (ngSubmit)="onSubmit()" [formGroup]="momentForm" #formDir="ngForm">
+<form (ngSubmit)="submit()" [formGroup]="momentForm" #formDir="ngForm">
   <div class="form-group">
     <label for="title">Title</label>
     <input
@@ -29,7 +29,7 @@
   </div>
   <div class="form-group">
     <label for="image">Put the photo the marked you the most</label>
-    <input type="file" />
+    <input type="file" (change)="onFileSelected($event)" />
   </div>
   <input type="submit" value="{{ btnText }}" />
 </form>
