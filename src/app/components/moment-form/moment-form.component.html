@@ -30,6 +30,9 @@
   <div class="form-group">
     <label for="image">Put the photo the marked you the most</label>
     <input type="file" (change)="onFileSelected($event)" />
+    <div *ngIf="image?.invalid && formDir.submitted" class="validation-error">
+      <p *ngIf="image?.errors?.['required']">The image is required</p>
+    </div>
   </div>
   <input type="submit" value="{{ btnText }}" />
 </form>
