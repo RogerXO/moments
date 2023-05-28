@@ -4,6 +4,7 @@ footer {
   flex-direction: column;
   place-items: center;
   height: 200px;
+  padding-top: 30px;
 }
 
 footer h3 {
