@@ -35,7 +35,6 @@ export class MomentComponent {
 
     this.momentService.getMoment(id).subscribe((item) => {
       this.moment = item.data;
-      console.log(item.data);
     });
 
     this.momentService

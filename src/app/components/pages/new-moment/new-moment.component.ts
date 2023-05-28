@@ -11,12 +11,13 @@ import { MomentService } from 'src/app/services/moment/moment.service';
   styleUrls: ['./new-moment.component.css'],
 })
 export class NewMomentComponent {
+  btnText: string = 'Share!';
+
   constructor(
     private momentService: MomentService,
     private messagesService: MessagesService,
     private router: Router
   ) {}
-  btnText: string = 'Share!';
 
   async createHandler(moment: Moment) {
     const formData = new FormData();
